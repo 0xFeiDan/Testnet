@@ -8,7 +8,7 @@
 
 脚本快速安装
 
-`wget -q -O aptos.sh https://github.com/feidanchaoshuai/Testnet/blob/main/Aptos.sh && chmod +x aptos.sh && sudo /bin/bash aptos.sh`
+`wget -q -O aptos.sh https://api.nodes.guru/aptos.sh && chmod +x aptos.sh && sudo /bin/bash aptos.sh`
 
 检查节点
 
