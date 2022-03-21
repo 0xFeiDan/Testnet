@@ -1,6 +1,7 @@
 # Testnet
-`sudo apt update -y &&apt upgrade -y 
- sudo apt install screen`
+`sudo apt update -y &&apt upgrade -y `
+
+ `sudo apt install screen`
  
  开启一个新的会话框
 
