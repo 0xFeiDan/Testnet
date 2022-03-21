@@ -1,7 +1,7 @@
 # Testnet
-本教程感谢
 
-guru nodes
+本教程感谢guru nodes
+
 `sudo su`
 
 `apt update -y &&apt upgrade -y `
