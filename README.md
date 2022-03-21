@@ -6,7 +6,6 @@
  `screen -S aptos`
  脚本快速安装
  `wget -q -O aptos.sh https://github.com/feidanchaoshuai/Testnet/blob/main/Aptos.sh && chmod +x aptos.sh && sudo /bin/bash aptos.sh`
- 
  检查节点
  `journalctl -u aptosd -f`
  重启节点
