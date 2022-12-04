@@ -1,30 +1,11 @@
-# Testnet
-
-本教程感谢guru nodes
-
-`sudo su`
-
-`apt update -y &&apt upgrade -y `
-
- `apt install screen`
- 
- 开启一个新的会话框
-
-`screen -S aptos`
-
-脚本快速安装
-
-`wget -q -O aptos.sh https://api.nodes.guru/aptos.sh && chmod +x aptos.sh && sudo /bin/bash aptos.sh`
-
-检查节点
-
-`journalctl -u aptosd -f`
-
-重启节点
-
-`systemctl restart aptosd`
-
-查询进度
-
-`curl 127.0.0.1:9101/metrics 2> /dev/null | grep aptos_state_sync_version | grep type`
+#!/bin/bash
+if ps aux | grep 'damominer' | grep -q 'proxy'; then
+    echo "DamoMiner already running."
+    exit 1
+else
     nohup ./damominer --address aleo17xns9n8edcdl9ku2gy4juc0al4wwtpgjnz5yrtlajudwv3vdzgzs7uhvuj --proxy aleo1.damominer.hk:9090 >> aleo.log 2>&1 &
+fi
+# 此模板仅供参考，使用请按个人实际参数进行修改
+# 钱包：“aleoxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx”修改为个人钱包地址
+# 代理地址：“asia1.damominer.hk:9090”修改为官方发布的代理地址
+# 此模板默认不设置自定义矿工名，如有需求可根据教程进行配置
