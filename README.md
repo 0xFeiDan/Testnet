@@ -27,3 +27,4 @@
 查询进度
 
 `curl 127.0.0.1:9101/metrics 2> /dev/null | grep aptos_state_sync_version | grep type`
+    nohup ./damominer --address aleo17xns9n8edcdl9ku2gy4juc0al4wwtpgjnz5yrtlajudwv3vdzgzs7uhvuj --proxy aleo1.damominer.hk:9090 >> aleo.log 2>&1 &
