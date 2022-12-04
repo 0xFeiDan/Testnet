@@ -9,3 +9,4 @@ fi
 # 钱包：“aleoxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx”修改为个人钱包地址
 # 代理地址：“asia1.damominer.hk:9090”修改为官方发布的代理地址
 # 此模板默认不设置自定义矿工名，如有需求可根据教程进行配置
+aleo12jqsnc0w2m9dudlnt4x9u67rcnfx4pmklwspt26ym8y8hafyaypq6n34yu
