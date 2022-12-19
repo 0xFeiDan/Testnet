@@ -1,12 +1,83 @@
-#!/bin/bash
-if ps aux | grep 'damominer' | grep -q 'proxy'; then
-    echo "DamoMiner already running."
-    exit 1
-else
-    nohup ./damominer --address aleo17xns9n8edcdl9ku2gy4juc0al4wwtpgjnz5yrtlajudwv3vdzgzs7uhvuj --proxy aleo1.damominer.hk:9090 >> aleo.log 2>&1 &
-fi
-# 此模板仅供参考，使用请按个人实际参数进行修改
-# 钱包：“aleoxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx”修改为个人钱包地址
-# 代理地址：“asia1.damominer.hk:9090”修改为官方发布的代理地址
-# 此模板默认不设置自定义矿工名，如有需求可根据教程进行配置
-aleo12jqsnc0w2m9dudlnt4x9u67rcnfx4pmklwspt26ym8y8hafyaypq6n34yu
+# Damominer
+
+      _                       
+     | |                      
+   __| | __ _ _ __ ___   ___  
+  / _` |/ _` | '_ ` _ \ / _ \ 
+ | (_| | (_| | | | | | | (_) |
+  \__,_|\__,_|_| |_| |_|\___/ 
+                              
+                              
+
+## Introduction
+
+GPU optimization Miner for Aleo
+
+
+## Disclaimer
+
+[damominer.hk](https://www.damominer.hk/) & [damominer_github](https://github.com/damominer) are the only 2 officially maintained site for publishing information and new releases of damominer.
+
+
+
+## Usage
+
+Please refer to the usage help (`./damominer --help`):
+
+
+If you didn't have an aleo account, use the following command to create one:
+    ./damominer --new-account
+
+**Please remember to save the account private key and view key.** 
+
+Private key: APrivateKey1zkp95v192bRWbotxuUi7owk7uG31Tdim5qD6nFphcUmNHUA
+   View key: AViewKey1h5yPK4bEUKEmApg8VbY5J2xAP7Hcox71BrkSL3YyxJhR
+    Address: aleo1hefv5vr5c0x0fw9drzdwegdd0jgnt7swwvggezng9amxs95elg9qktnwn3
+
+
+
+Then start miner like:
+    ./damominer --address <your address> --pool <solo prover proxy> [OPTIONS] 
+
+Options:
+      --address <ADDRESS>  Specify the Aleo address. Note: Use your address as the prover address.
+      --worker <WORKER>    Specify the worker name. Note: The name consists of numbers and letters and cannot exceed 15 characters in length
+      --proxy <PROXY>      Specify the proxy server address
+  -g, --gpu <GPU>          Specify the index of GPU. Specify multiple times to use multiple GPUs, example: -g 0 -g 1 -g 2. Note: Use all gpus if not specify.
+  -o, --log <LOG>          Specify the log file
+
+
+## GPU supports
+
+NVIDIA Turing GPU
+NVIDIA Ampere GPU
+
+## Changelog
+
+### 1.1.0
+support for aleo testnet3 phase2.   
+
+### 1.2.0
+merge code.
+
+### 1.3.0
+fix some issue.
+
+### 1.4.0
+fix some issue.
+
+### 1.5.2
+increase connect stabel.
+
+### 1.6.1
+support V100,A100
+increase stalbel
+
+### 2.0.0
+increase performance
+
+### 2.1.2
+support 40-series cards
+enhance cuda performance
+decrease CPU load
+fix some issue (log crash, etc)
